@@ -1,0 +1,41 @@
+.formulario {
+    img {
+        margin-bottom: 5rem;
+    }
+
+    fieldset {
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        border-color: $gris;
+    }
+
+    legend {
+        color: $grisOscuro;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: $bold;
+    }
+
+    label {
+        font-weight: $bold;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    input:not([type="submit"]) {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+}

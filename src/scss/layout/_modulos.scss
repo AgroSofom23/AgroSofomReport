@@ -1,0 +1,48 @@
+.modulos {
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3rem;
+    }
+
+    .modulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            font-weight: $bold;
+            color: $grisOscuro;
+        }
+
+        p {
+            line-height: 2;
+            text-align: center;
+        }
+
+        .iconos {
+            height: 15rem;
+            width: 15rem;
+            background-color: $verde;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            &:hover {
+                height: 20rem;
+                width: 20rem;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+        }
+    }
+}

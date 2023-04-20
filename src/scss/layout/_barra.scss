@@ -1,0 +1,21 @@
+.barra {
+    margin: $separacion 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .boton {
+        @include tablet {
+            margin: 0 0 1rem 0;
+        }
+    }
+}

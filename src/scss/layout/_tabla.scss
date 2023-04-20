@@ -1,0 +1,110 @@
+table {
+    @include tabletMax {
+        table
+        thead,
+        tbody,
+        tr,
+        th,
+        td,
+        caption {
+            display: block;
+        }
+
+        table{
+            border: none
+        }
+
+        thead {
+            tr {
+                display: none;
+            }
+        }
+
+        tbody {
+            tr {
+                margin: 1rem 0;
+                border: 1px solid $grisOscuro;
+            }
+        }
+
+        td {
+            border: none;
+            border-bottom: 1px solid $gris;
+            position: relative;
+            padding-left: 45%;
+            text-align: left;
+        }
+
+        tr {
+            td:last-child {
+                border-bottom: 1px solid $gris;
+            }
+        }
+
+        tr:last-child {
+            td:last-child {
+                border: none;
+            }
+        }
+
+        td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td:nth-of-type(1):before {
+            content: "ID";
+        }
+        
+        td:nth-of-type(2):before {
+            content: "Nombre";
+        }
+        
+        td:nth-of-type(3):before {
+            content: "Apellido";
+        }
+        
+        td:nth-of-type(4):before {
+            content: "Email";
+        }
+        
+        td:nth-of-type(5):before {
+            content: "Acciones";
+        }
+    }
+
+    width: 100%;
+    background: $blanco;
+    margin-bottom: 1rem;
+    //border: solid 1px $gris;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead, tbody {
+        tr {
+            th {
+                background-color: $verde;
+                color: $blanco;
+                padding: 1rem 1rem;
+                font-weight: $bold;
+                text-transform: uppercase;
+                //border: 1px solid $gris;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                color: $negro;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -16,8 +16,49 @@
         @content;
     }
 }
+
+@mixin telefonoMax {
+    @media (max-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tabletMax {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+  
+@mixin desktopMax {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
 @mixin grid($columnas, $espaciado ) {
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin boton($bgColor, $display) {
+    background-color: $bgColor;
+    color: $blanco;
+    font-weight: $bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: calc($separacion/2);
+    display: $display;
+    border: none;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    &:hover {
+        background-color: darken($color: $bgColor, $amount: 5);
+        cursor: pointer;
+    }
 }
